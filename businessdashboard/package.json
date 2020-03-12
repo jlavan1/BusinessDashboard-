@@ -9,8 +9,10 @@
     "alphavantage": "^2.0.1",
     "google-finance": "^0.1.12",
     "lodash": "^4.17.15",
+    "plotly.js": "^1.52.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-plotly.js": "^2.4.0",
     "react-scripts": "3.4.0"
   },
   "scripts": {
