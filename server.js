@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
 const path = require('path');
-// const Cors =require('cors')
+
 const bodyParser =require('body-parser')
 const logger =require( 'morgan');
 const passport=require('passport')
@@ -21,12 +21,15 @@ app.use(session({
     resave: false, 
     saveUninitialized: true
   }));
+
+// app.use(Cors(corsOptions));
 app.use(logger('dev'));
+// require('./routes/passport');
+const auth=require('./routes/users')
 
-const auth=require('./routes/local')
-app.use(auth)
 
-
+// app.use('/users', Users)
+app.use(auth);
 app.use(express.static(path.join(__dirname, 'build')))
  
 app.get('/test',function(req,res){

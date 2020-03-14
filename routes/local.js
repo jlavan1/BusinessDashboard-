@@ -5,10 +5,10 @@ const passport = require('passport');
 var router = express.Router();
 const models = require('../models');
 const bodyParser = require('body-parser');
-
-
+const jwt = require('jsonwebtoken'); 
+const withAuth = require('./middleware');
 app.use(bodyParser.urlencoded({ extended: false }));
-
+const secret = 'mysecretsshhh';
 app.use(session({
   secret: "user_id",
   resave: false,
@@ -46,9 +46,7 @@ router.post("/signup", function (req, res) {
       models.user_accounts.create({
         fullName: req.body.fullName,
         email: req.body.email,
-        password: encryptionPassword(req.body.password),
-
-
+        password: encryptionPassword(req.body.password)
       }).error(function (err) {
         console.log(err);
         res.render('signup', { error: 'The user is already created ' })
@@ -71,7 +69,8 @@ passport.use(new LocalStrategy(
       }
     }).then(function (user) {
       if (!user) {
-        return done(null, false)
+        console.log('email already taken')
+        return done(null, false,{message: 'email already taken '})
       }
       if (user.password != encryptionPassword(password)) {
         return done(null, false)
@@ -91,6 +90,12 @@ passport.deserializeUser(function (id, done) {
     done(null, user);
   });
 });
+
+app.get('/secret', withAuth, function(req, res) {
+  res.send('The password is potato');
+});
+
+
 
 
 
@@ -113,16 +118,16 @@ router.get('/success', function (req, res) {
 });
 
 
-router.get('/profile', function (req, res) {
-  if (req.isAuthenticated()) {
-    console.log(req.user);
-    res.render("profile.ejs", { name: req.user, name: req.user })
-  } else {
-    res.redirect('/signup')
-  }
+// router.get('/profile', function (req, res) {
+//   if (req.isAuthenticated()) {
+//     console.log(req.user);
+//     res.render("profile.ejs", { name: req.user, name: req.user })
+//   } else {
+//     res.redirect('/signup')
+//   }
 
 
-});
+// });
 
 
 router.get('/logout', function (req, res) {

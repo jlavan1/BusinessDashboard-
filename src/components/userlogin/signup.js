@@ -23,16 +23,16 @@ class ModalPage extends Component {
         event.preventDefault()
         console.log(this.state.fullName + this.state.email + this.state.password)
 
-        axios.post('http://localhost:4040/signup', {
+        axios.post('/signup', {
             fullName: this.state.fullName,
             email: this.state.email,
-            password: this.password,
+            password: this.state.password,
 
         })
             .then(response => {
 console.log('seccess')
 console.log(response)
-
+this.props.history.push(`/signin`)
             }).catch(error=>{
                 console.log('error')
                 console.log(error)
@@ -45,7 +45,7 @@ console.log(response)
         console.log(this.state.fullName + this.state.email + this.state.password)
         return (
             <MDBContainer>
-                <MDBBtn rounded onClick={this.toggle(2)}>SIGN UP</MDBBtn>
+                <MDBBtn  rounded onClick={this.toggle(2)} >SIGN UP</MDBBtn>
                 <MDBModal isOpen={this.state.modal2} toggle={this.toggle(2)}>
                     <MDBModalHeader className="text-center" titleClass="w-100 font-weight-bold" toggle={this.toggle(2)}>Sign in</MDBModalHeader>
                     <MDBModalBody>
