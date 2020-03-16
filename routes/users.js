@@ -1,12 +1,14 @@
 const express = require('express')
 const users = express.Router()
 const cors = require('cors')
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
-
+const passport = require('passport');
 const models = require('../models');
-
+import config from './config';
 const secret = 'mysecretsshhh';
+import auth from './jwtConfig'
+// const { JWT_SECRET } = config;
 
 
 users.post('/signup', (req, res) => {
@@ -68,32 +70,34 @@ users.post('/signin', (req, res) => {
     })
 })
 
-users.post('/secure', function(req, res) {
-    const token = jwt.sign({ user: { id: 1, name: 'ME!', role: 'average' } }, 'dsfklgj');
-    console.log(token);
-    res.json({ jwt: token });
-});
-
-
-// users.get('/profile', (req, res) => {
-//   var decoded = jwt.verify(req.headers['authorization'], secret)
-
-//   models.user_accounts.findOne({
-//     where: {
-//       id: decoded.id
+// function verifyToken(req, res, next) {
+//     // Get auth header value
+//     const bearerHeader = req.headers['authorization'];
+//     // Check if bearer is undefined
+//     if(typeof bearerHeader !== 'undefined') {
+//       // Split at the space
+//       const bearer = bearerHeader.split(' ');
+//       // Get token from array
+//       const bearerToken = bearer[1];
+//       // Set the token
+//       req.token = bearerToken;
+//       // Next middleware
+//       next();
+//     } else {
+//       // Forbidden
+//       res.sendStatus(403);
 //     }
-//   })
-//     .then(user => {
-//         console.log(user)
-//       if (user) {
-//         res.json(user)
-//       } else {
-//         res.send('User does not exist')
-//       }
-//     })
-//     .catch(err => {
-//       res.send('error: ' + err)
-//     })
-// })
+  
+//   }
+
+  users.get('/user', auth, async (req, res) => {
+    try {
+      const user = await models.user_accounts.findById(req.user.id);
+      if (!user) throw Error('User Does not exist');
+      res.json(user);
+    } catch (e) {
+      res.status(400).json({ msg: e.message });
+    }
+  });
 
 module.exports = users

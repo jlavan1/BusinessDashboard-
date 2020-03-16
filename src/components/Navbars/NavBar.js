@@ -19,6 +19,13 @@ class FullPageIntroWithFixedNavbar extends React.Component {
         });
     }
 
+  handleClick = event => {
+    event.preventDefault()
+   console.log('done')
+    localStorage.removeItem("usertoken")
+    // Remove the user object from the Redux store
+    // this.props.logoutUser()
+  }
     render() {
         console.log()
         return (
@@ -40,7 +47,12 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                                 <MDBNavLink to='/signin'>SignIn</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
-                                <MDBNavLink to='/signup'>Sign Up</MDBNavLink>
+                                <MDBNavLink to='/signup' onClick={this.handleClick}>Sign Up</MDBNavLink>
+                             
+                            </MDBNavItem>
+                            <MDBNavItem>
+                                <MDBNavLink to='/signup' onClick={this.handleClick}>Log Out</MDBNavLink>
+                             
                             </MDBNavItem>
                         </MDBNavbarNav>
                     </MDBCollapse>
