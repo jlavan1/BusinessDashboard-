@@ -7,7 +7,8 @@ class Stockapi extends Component {
         super(props);
         this.state = {
             stockChartXValues: [],
-            stockChartYValues: []
+            stockChartYValues: [],
+            stock : 'AMZN'
         }
     }
 
@@ -19,7 +20,7 @@ class Stockapi extends Component {
         const pointerToThis = this;
         const API_KEY = 'Place API_Key here';
         let StockSymbol = 'AMZN'
-        let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
+        let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${this.state.stock}&outputsize=compact&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
 
@@ -63,7 +64,7 @@ class Stockapi extends Component {
                             marker: { color: 'red' },
                         }
                     ]}
-                    layout={{ width: 720, height: 440, title: "Monthly Analysis" }}
+                    layout={{ width: 520, height: 300, title: "Monthly Analysis" }}
                 />
 
 
