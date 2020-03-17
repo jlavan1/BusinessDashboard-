@@ -1,0 +1,12 @@
+.form-elegant .modal-header {
+    border-bottom: none;
+  }
+  
+  .form-elegant .modal-footer{
+    border-top: none;
+    flex-direction: column;
+  }
+  
+  .form-elegant .font-small {
+    font-size: 0.8rem;
+  }
