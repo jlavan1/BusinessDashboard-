@@ -51,6 +51,9 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                              
                             </MDBNavItem>
                             <MDBNavItem>
+                                <MDBNavLink to='/dashboard'>Dashboard</MDBNavLink>
+                            </MDBNavItem>
+                            <MDBNavItem>
                                 <MDBNavLink to='/signup' onClick={this.handleClick}>Log Out</MDBNavLink>
                              
                             </MDBNavItem>

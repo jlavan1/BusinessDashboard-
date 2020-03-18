@@ -26,6 +26,12 @@ export default class main extends Component {
                                 <Col><Signup /></Col>
                             </Row>
                         </Container>
+                        <Container >
+                            <Row >
+                                <Col></Col>
+                                <Col></Col>
+                            </Row>
+                        </Container>
                     </MDBContainer>
                 </MDBJumbotron>
                 <div className='login'>
