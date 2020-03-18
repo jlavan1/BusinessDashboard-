@@ -3,12 +3,10 @@ const users = express.Router()
 const cors = require('cors')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
-const passport = require('passport');
 const models = require('../models');
 
 const secret = 'mysecretsshhh';
 import auth from './jwtConfig'
-// const { JWT_SECRET } = config;
 
 
 users.post('/signup', (req, res) => {
@@ -90,10 +88,9 @@ users.post('/signin', (req, res) => {
   
 //   }
 
-
   users.get('/user', auth, async (req, res) => {
     try {
-      const user = await models.user_accounts.findById(req.user.id);
+      const user = await models.user_accounts.findById(req.user.id).select('password');
       if (!user) throw Error('User Does not exist');
       res.json(user);
     } catch (e) {

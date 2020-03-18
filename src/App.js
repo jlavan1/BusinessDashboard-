@@ -21,7 +21,7 @@ function App() {
   <Route exact path='/' component={Main}/>
 <Route exact path='/signin' component={Signin}/>
 <Route exact path='/signup' component={Signup}/>
-<Route exact path="/profile" component={Profile} />
+<Route exact path="/profile" component={Profile}/>
 <Footer/>
 </BrowserRouter>
     </div>
