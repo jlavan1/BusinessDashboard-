@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBInput, MDBModalFooter } from 'mdbreact';
 import { Redirect } from 'react-router-dom';
 import './index.css';
-
 import axios from 'axios'
 
 class ModalPage extends Component {
