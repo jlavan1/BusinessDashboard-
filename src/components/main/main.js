@@ -10,7 +10,8 @@ export default class main extends Component {
         this.state = {
         };
     }
-//
+////
+
     render() {
         return (
             <div className='main'>
