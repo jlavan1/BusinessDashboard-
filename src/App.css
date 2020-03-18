@@ -1,9 +1,7 @@
 .App {
-  background-image: url('https://businessfirstfamily.com/wp-content/uploads/2017/02/technology-background-build-app.jpg');
+  background-image: url("https://businessfirstfamily.com/wp-content/uploads/2017/02/technology-background-build-app.jpg");
   background-size: cover;
   min-height: 100vh;
   background-attachment: fixed;
   align-content: center;
-  
 }
-

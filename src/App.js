@@ -1,20 +1,18 @@
-import React from 'react';
+import React from "react";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
-import { BrowserRouter , Switch, Route, Link } from 'react-router-dom';
-import Nav from './components/Navbars/NavBar'
-import Main from './components/main/main'
-import Signin from './components/userlogin/signin'
-import Signup from './components/userlogin/signup'
-import Profile from './components/main/profile'
-import Footer from './components/footer/footer'
+import { BrowserRouter, Route } from "react-router-dom";
+import Nav from "./components/Navbars/NavBar";
+import Main from "./components/main/main";
+import Signin from "./components/userlogin/signin";
+import Signup from "./components/userlogin/signup";
+import Profile from "./components/main/profile";
+import Footer from "./components/footer/footer";
 import WeatherEngine from "./components/WeatherEngine";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'mdbreact/dist/css/mdb.css';
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+import "./App.css";
 
 function App() {
-
-
   return (
     <div className="App">
       <BrowserRouter>
