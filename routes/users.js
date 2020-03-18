@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
 const passport = require('passport');
 const models = require('../models');
-import config from './config';
+
 const secret = 'mysecretsshhh';
 import auth from './jwtConfig'
 // const { JWT_SECRET } = config;
@@ -89,6 +89,7 @@ users.post('/signin', (req, res) => {
 //     }
   
 //   }
+
 
   users.get('/user', auth, async (req, res) => {
     try {

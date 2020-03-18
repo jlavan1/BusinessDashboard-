@@ -32,7 +32,7 @@ class ModalPage extends Component {
             .then(response => {
 console.log('seccess')
 console.log(response)
-this.props.history.push(`/signin`)
+// this.props.history.push(`/signin`)
             }).catch(error=>{
                 console.log('error')
                 console.log(error)
@@ -47,7 +47,7 @@ this.props.history.push(`/signin`)
             <MDBContainer>
                 <MDBBtn  rounded onClick={this.toggle(2)} >SIGN UP</MDBBtn>
                 <MDBModal isOpen={this.state.modal2} toggle={this.toggle(2)}>
-                    <MDBModalHeader className="text-center" titleClass="w-100 font-weight-bold" toggle={this.toggle(2)}>Sign in</MDBModalHeader>
+                    <MDBModalHeader className="text-center" titleClass="w-100 font-weight-bold" toggle={this.toggle(2)}>SIGN UP</MDBModalHeader>
                     <MDBModalBody>
                         <form className="mx-3 grey-text">
                             <MDBInput label="Your name" icon="user" group type="text" validate error="wrong" success="right" placeholder="Full Name" name="fullName" onChange={(event) => this.setState({ fullName: event.target.value })} />

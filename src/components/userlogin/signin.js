@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBInput, MDBModalFooter } from 'mdbreact';
 import { Redirect } from 'react-router-dom';
 import './index.css';
+
 import axios from 'axios'
 
 class ModalPage extends Component {
@@ -32,8 +33,8 @@ handleClick(event) {
   })
       .then(response => {
         console.log(response)
-        localStorage.setItem('usertoken', response.data)
-        this.props.history.push(`/secure`)
+        localStorage.setItem('x-auth-token', response.data)
+        
         return response.data
 
       }).catch(error=>{
