@@ -72,7 +72,7 @@ passport.use(new LocalStrategy(
         console.log('email already taken')
         return done(null, false,{message: 'email already taken '})
       }
-      if (user.password != encryptionPassword(password)) {
+      if (user.password !== encryptionPassword(password)) {
         return done(null, false)
       }
       return done(null, user);

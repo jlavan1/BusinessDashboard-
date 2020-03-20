@@ -1,11 +1,12 @@
 {
   "development": {
-    "username": "mohammedmustafa",
-    "password": null,
-    "database": "bussiness-dashboard",
-    "host": "localhost",
-    "dialect": "postgres"
-    
+ "username": "rryeyjqptbeixh",
+    "password": "b2c71fd8fc9ee9bd08e2ca4cdd7d3e8843db49d407d6cc717f7f52d8cd346304",
+    "database": "d9cdl5t4ifnvhj",
+    "host": "ec2-50-17-178-87.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": "true"    
   },
   "test": {
     "username": "root",
@@ -23,4 +24,5 @@
     "dialect": "mysql"
   
   }
+}
 }

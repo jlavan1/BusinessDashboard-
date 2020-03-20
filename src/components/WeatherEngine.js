@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import WeatherCard from "./WeatherCard/component";
+import "./main/main.css";
 
 const WeatherEngine = ({ location }) => {
   const [query, setQuery] = useState("");
@@ -52,6 +52,7 @@ const WeatherEngine = ({ location }) => {
             city={weather.city}
             country={weather.country}
           />
+          <br/>
           <form>
             <input value={query} onChange={e => setQuery(e.target.value)} />
             <button onClick={e => handleSearch(e)}>Search</button>

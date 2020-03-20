@@ -1,3 +1,13 @@
 .main {
   text-align: center;
+  display: inline;
 }
+
+.weather {
+  margin-bottom: 100px;
+}
+.container {
+  display: inline;
+  text-align: center;
+}
+

@@ -5,3 +5,7 @@
   background-attachment: fixed;
   align-content: center;
 }
+
+.container {
+  margin-top: 100px;
+}

@@ -36,9 +36,9 @@ app.get("/test", function(req, res) {
   res.send("test");
 });
 
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "build/index.html"));
+// });
 
 //
 models.sequelize.sync().then(function() {
