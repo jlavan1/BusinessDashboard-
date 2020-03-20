@@ -2,13 +2,13 @@
 
 # dependencies
 
-/.pnp
-.pnp.js
+# /.pnp
+# .pnp.js
 
 # testing
 /coverage
 
-
+node_modules
 # misc
 .DS_Store
 .env.local
