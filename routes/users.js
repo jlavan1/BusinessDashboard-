@@ -44,7 +44,7 @@ users.post('/signup', (req, res) => {
       res.send('error: ' + err)
     })
 })
-
+//signin
 users.post('/signin', (req, res) => {
     models.user_accounts.findOne({
     where: {
@@ -87,7 +87,7 @@ users.post('/signin', (req, res) => {
 //     }
   
 //   }
-
+//
   users.get('/user', auth, async (req, res) => {
     try {
       const user = await models.user_accounts.findById(req.user.id).select('password');
