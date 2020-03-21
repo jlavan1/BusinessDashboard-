@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WeatherCard from "./WeatherCard/component";
 import "./main/main.css";
+import { MDBCol, MDBFormInline, MDBBtn } from "mdbreact";
 
 const WeatherEngine = ({ location }) => {
   const [query, setQuery] = useState("");
@@ -52,11 +53,29 @@ const WeatherEngine = ({ location }) => {
             city={weather.city}
             country={weather.country}
           />
-          <br/>
-          <form>
-            <input value={query} onChange={e => setQuery(e.target.value)} />
-            <button onClick={e => handleSearch(e)}>Search</button>
-          </form>
+          <br />
+          <MDBCol md="12">
+            <MDBFormInline className="md-form mr-auto">
+              <input
+                className="form-control mr-sm-2 white-text"
+                type="text"
+                placeholder="Enter City"
+                aria-label="Search"
+                value={query}
+                onChange={e => setQuery(e.target.value)}
+              />
+              <MDBBtn
+                gradient="aqua"
+                rounded
+                size="sm"
+                type="submit"
+                className="mr-auto white-text"
+                onClick={e => handleSearch(e)}
+              >
+                Get Weather
+              </MDBBtn>
+            </MDBFormInline>
+          </MDBCol>
         </div>
       ) : loading ? (
         <div style={{ color: "black" }}>Loading</div>
