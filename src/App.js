@@ -7,7 +7,6 @@ import Signin from "./components/userlogin/signin";
 import Signup from "./components/userlogin/signup";
 import Profile from "./components/main/profile";
 import Footer from "./components/footer/footer";
-// import Dashboard from './components/dashboard/dashboard'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "./App.css";
@@ -21,7 +20,6 @@ function App() {
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/profile" component={Profile} />
-        {/* <Route exact path="/dashboard" component={Dashboard} /> */}
         <Footer />
       </BrowserRouter>
     </div>
