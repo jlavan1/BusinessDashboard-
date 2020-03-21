@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink } from 'mdbreact';
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -37,7 +36,7 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                     {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                     <MDBCollapse isOpen={this.state.collapse} navbar>
                         <MDBNavbarNav left>
-                            <MDBNavItem active>
+                            <MDBNavItem>
                                 <MDBNavLink to="/">Home</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>
@@ -50,7 +49,7 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                                 <MDBNavLink to='/signup' onClick={this.handleClick}>Sign Up</MDBNavLink>
                              
                             </MDBNavItem>
-                            <MDBNavItem>
+                            <MDBNavItem >
                                 <MDBNavLink to='/dashboard'>Dashboard</MDBNavLink>
                             </MDBNavItem>
                             <MDBNavItem>

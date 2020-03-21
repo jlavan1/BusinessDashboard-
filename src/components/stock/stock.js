@@ -1,9 +1,11 @@
 import React from 'react';
 import Stockapi from './StockApi';
 
-const stock = () =>(
+const stock = () => (
     <div>
+        
         <Stockapi />
+        
     </div>
 
 )
