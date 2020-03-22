@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Stock from '../Containers/StockApi/Stock';
+import Stock from './stock';
 
 class Layout extends Component {
 

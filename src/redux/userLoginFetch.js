@@ -8,7 +8,7 @@ export const userLoginFetch = user => {
         .then(response => {
           console.log(response)
           localStorage.setItem('usertoken', response.data)
-        //   this.props.history.push(`/secure`)
+          dispatch(loginUser(data.user))
           return response.data
   
         }).catch(error=>{

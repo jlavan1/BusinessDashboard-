@@ -32,7 +32,7 @@ class FullPageIntroWithFixedNavbar extends React.Component {
             <div>
                 <MDBNavbar color="indigo" dark expand="md" fixed="top">
                     <MDBNavbarBrand href="/">
-                        <strong>Navbar</strong>
+                        <strong>Bussiness Dashboard App</strong>
                     </MDBNavbarBrand>
                     {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                     <MDBCollapse isOpen={this.state.collapse} navbar>
@@ -40,9 +40,9 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                             <MDBNavItem active>
                                 <MDBNavLink to="/">Home</MDBNavLink>
                             </MDBNavItem>
-                            <MDBNavItem>
+                            {/* <MDBNavItem>
                                 <MDBNavLink to="#">Link</MDBNavLink>
-                            </MDBNavItem>
+                            </MDBNavItem> */}
                             <MDBNavItem>
                                 <MDBNavLink to='/signin'>SignIn</MDBNavLink>
                             </MDBNavItem>

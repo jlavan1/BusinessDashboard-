@@ -21,3 +21,4 @@ const Condition = ({ temp, condition }) => {
   );
 };
 
+export default Condition;

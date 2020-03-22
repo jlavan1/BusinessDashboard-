@@ -5,7 +5,7 @@ import Nav from './components/Navbars/NavBar'
 import Main from './components/main/main'
 import Signin from './components/userlogin/signin'
 import Signup from './components/userlogin/signup'
-import Profile from './components/main/profile'
+import Dash from './components/dashboard/dashboard'
 import Footer from './components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'mdbreact/dist/css/mdb.css';
@@ -21,7 +21,7 @@ function App() {
   <Route exact path='/' component={Main}/>
 <Route exact path='/signin' component={Signin}/>
 <Route exact path='/signup' component={Signup}/>
-<Route exact path="/profile" component={Profile}/>
+<Route exact path="/dashboard" component={Dash}/>
 <Footer/>
 </BrowserRouter>
     </div>

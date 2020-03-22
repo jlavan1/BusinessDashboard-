@@ -36,7 +36,7 @@ const Icon = props => {
       icon = `./img/Snow-2x.png`;
       break;
     case "Rain":
-      icon = `./img/Rain-2x.png`;
+      icon = `./img/Rain-2x.png` ;
       break;
     case "Drizzle":
       icon = `./img/Drizzle-2x.png`;
