@@ -22,12 +22,10 @@ function App() {
   <Route exact path='/' component={Main}/>
 <Route exact path='/signin' component={Signin}/>
 <Route exact path='/signup' component={Signup}/>
-<<<<<<< HEAD
 <Route exact path="/dashboard" component={Dash}/>
-=======
-<Route exact path="/profile" component={Profile}/>
-<Route exact path="/dashboard" component={dashboard}/>
->>>>>>> c1162a67fd457d01eafcc6913d0b305ccd06f840
+
+
+
 <Footer/>
 </BrowserRouter>
     </div>
