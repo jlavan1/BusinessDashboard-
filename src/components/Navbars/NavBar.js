@@ -38,7 +38,7 @@ class FullPageIntroWithFixedNavbar extends React.Component {
       <div>
         <MDBNavbar color="indigo" dark expand="md" fixed="top">
           <MDBNavbarBrand href="/">
-            <strong>Navbar</strong>
+            <strong>Business Dashboard</strong>
           </MDBNavbarBrand>
           {!this.state.isWideEnough && (
             <MDBNavbarToggler onClick={this.onClick} />

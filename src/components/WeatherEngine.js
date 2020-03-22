@@ -53,7 +53,6 @@ const WeatherEngine = ({ location }) => {
             city={weather.city}
             country={weather.country}
           />
-          <br />
           <MDBCol md="12">
             <MDBFormInline className="md-form mr-auto">
               <input
