@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Signin from "../userlogin/signin";
-import Signup from "../userlogin/signup";
-import WeatherEngine from "../WeatherEngine";
-import { MDBJumbotron, MDBContainer } from "mdbreact";
-import { Col, Container, Row } from "react-bootstrap";
-import "./main.css";
-export default class main extends Component {
+import News from "../news/newsApi";
+import Reminder from "../reminder/Reminders";
+import WeatherEngine from "../WeatherCard/WeatherEngine";
+//import Stock from "../stock/stock";
+//import Plot from "react-plotly.js";
+import "./dash.css";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
+export default class dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -13,25 +14,35 @@ export default class main extends Component {
 
   render() {
     return (
-      <div className="main">
-        <MDBJumbotron>
-          <MDBContainer className="title">
-            <h2 className="display-4">Business Dashboard App</h2>
-            <p className="lead"></p>
+      <div>
+        <div>
+          <Jumbotron fluid>
             <Container>
-              <Row>
-                <Col>
-                  <Signin />
-                </Col>
-                <Col>
-                  <Signup />
-                </Col>
-              </Row>
+              <h1>Welcome </h1>
+              <p></p>
+              <div></div>
             </Container>
-          </MDBContainer>
-        </MDBJumbotron>
-        <div className="login"></div>
-        <WeatherEngine />
+          </Jumbotron>
+        </div>
+        <div>
+          <Container>
+            <Row>
+              <Col lg="5" style={{ height: "500px" }}>
+                <News />
+              </Col>
+              <Col lg="" style={{ height: "100px" }}>
+                {/* <Stock /> */}
+              </Col>
+              <Col lg="4" style={{ height: "200px" }}>
+                <Reminder />
+              </Col>
+              <Col lg="3" style={{ height: "500px" }}>
+                <WeatherEngine location="Houston, USA" />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        no
       </div>
     );
   }

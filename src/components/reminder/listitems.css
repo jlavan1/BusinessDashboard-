@@ -1,0 +1,33 @@
+.list{
+    color: black;
+    width: 300px;
+    background-color: white;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.list p{
+    color: black;
+    padding: 15px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.list p span{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    
+}
+
+.faicons{
+    margin: auto;
+    font-size: 15px;
+    
+}
+
+.list body {
+    margin: auto;
+}

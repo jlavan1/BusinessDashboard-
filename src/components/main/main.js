@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Signin from "../userlogin/signin";
 import Signup from "../userlogin/signup";
-import WeatherEngine from "../WeatherEngine";
 import { MDBJumbotron, MDBContainer } from "mdbreact";
 import { Col, Container, Row } from "react-bootstrap";
 import "./main.css";
@@ -10,6 +9,7 @@ export default class main extends Component {
     super(props);
     this.state = {};
   }
+  ////
 
   render() {
     return (
@@ -28,12 +28,15 @@ export default class main extends Component {
                 </Col>
               </Row>
             </Container>
+            <Container>
+              <Row>
+                <Col></Col>
+                <Col></Col>
+              </Row>
+            </Container>
           </MDBContainer>
         </MDBJumbotron>
         <div className="login"></div>
-        <div className="weather">
-          <WeatherEngine location="Houston, USA" />
-        </div>
       </div>
     );
   }

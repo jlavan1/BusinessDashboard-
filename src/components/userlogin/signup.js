@@ -38,7 +38,7 @@ class ModalPage extends Component {
       .then(response => {
         console.log("seccess");
         console.log(response);
-        this.props.history.push(`/signin`);
+        // this.props.history.push(`/signin`)
       })
       .catch(error => {
         console.log("error");
@@ -59,7 +59,7 @@ class ModalPage extends Component {
             titleClass="w-100 font-weight-bold"
             toggle={this.toggle(2)}
           >
-            Sign in
+            SIGN UP
           </MDBModalHeader>
           <MDBModalBody>
             <form className="mx-3 grey-text">

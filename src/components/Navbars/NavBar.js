@@ -30,6 +30,7 @@ class FullPageIntroWithFixedNavbar extends React.Component {
     event.preventDefault();
     console.log("done");
     localStorage.removeItem("usertoken");
+    // Remove the user object from the Redux store
     // this.props.logoutUser()
   };
   render() {
@@ -38,19 +39,19 @@ class FullPageIntroWithFixedNavbar extends React.Component {
       <div>
         <MDBNavbar color="indigo" dark expand="md" fixed="top">
           <MDBNavbarBrand href="/">
-            <strong>Business Dashboard</strong>
+            <strong>Bussiness Dashboard App</strong>
           </MDBNavbarBrand>
           {!this.state.isWideEnough && (
             <MDBNavbarToggler onClick={this.onClick} />
           )}
           <MDBCollapse isOpen={this.state.collapse} navbar>
             <MDBNavbarNav left>
-              <MDBNavItem active>
+              <MDBNavItem>
                 <MDBNavLink to="/">Home</MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#">Link</MDBNavLink>
-              </MDBNavItem>
+              {/* <MDBNavItem>
+                                <MDBNavLink to="#">Link</MDBNavLink>
+                            </MDBNavItem> */}
               <MDBNavItem>
                 <MDBNavLink to="/signin">SignIn</MDBNavLink>
               </MDBNavItem>
@@ -58,6 +59,9 @@ class FullPageIntroWithFixedNavbar extends React.Component {
                 <MDBNavLink to="/signup" onClick={this.handleClick}>
                   Sign Up
                 </MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/dashboard">Dashboard</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to="/signup" onClick={this.handleClick}>

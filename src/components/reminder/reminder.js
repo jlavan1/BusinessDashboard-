@@ -1,5 +1,5 @@
 import React from "react";
-// import './App.css';
+import "./Remind.css";
 import ListItems from "./listitems.js";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTrash, faThList } from "@fortawesome/free-solid-svg-icons";
@@ -59,7 +59,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <header>
           <form id="to-do-form" onSubmit={this.addItem}>
             <input

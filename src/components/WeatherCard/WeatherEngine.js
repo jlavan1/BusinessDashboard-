@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import WeatherCard from "./WeatherCard/component";
-import "./main/main.css";
+import WeatherCard from "./component";
+import "../main/main.css";
 import { MDBCol, MDBFormInline, MDBBtn } from "mdbreact";
 
 const WeatherEngine = ({ location }) => {
@@ -47,12 +47,6 @@ const WeatherEngine = ({ location }) => {
     <div>
       {!loading && !error ? (
         <div>
-          <WeatherCard
-            temp={weather.temp}
-            condition={weather.condition}
-            city={weather.city}
-            country={weather.country}
-          />
           <MDBCol md="12">
             <MDBFormInline className="md-form mr-auto">
               <input
@@ -75,6 +69,13 @@ const WeatherEngine = ({ location }) => {
               </MDBBtn>
             </MDBFormInline>
           </MDBCol>
+          <WeatherCard
+            temp={weather.temp}
+            condition={weather.condition}
+            city={weather.city}
+            country={weather.country}
+          />
+          <br />
         </div>
       ) : loading ? (
         <div style={{ color: "black" }}>Loading</div>
