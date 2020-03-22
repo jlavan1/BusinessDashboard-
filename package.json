@@ -34,6 +34,7 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pg": "^7.18.2",
+<<<<<<< HEAD
     "plotly": "^1.0.6",
     "plotly.js": "^1.52.3",
     "plotly.js-cartesian-dist": "^1.52.3",
@@ -43,6 +44,12 @@
     "react-dom": "^16.13.0",
     "react-fontawesome": "^1.7.1",
     "react-plotly": "^1.0.0",
+=======
+    "plotly.js": "^1.52.3",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "^16.13.0",
+>>>>>>> c1162a67fd457d01eafcc6913d0b305ccd06f840
     "react-plotly.js": "^2.4.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",

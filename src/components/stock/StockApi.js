@@ -82,7 +82,13 @@ class Stockapi extends Component {
         //console.log(stockChartZValues)
         return (
             <div>
+<<<<<<< HEAD
                <p>Stock is: {stock} </p>
+=======
+                <h1>Rid of Nabar</h1>
+                
+                <p>Stock is: {stock} </p>
+>>>>>>> c1162a67fd457d01eafcc6913d0b305ccd06f840
                 <form onSubmit={this.handleSubmit}>
                 <p><input
                     id='id'
