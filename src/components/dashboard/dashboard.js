@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import News from "../news/newsApi";
 import Reminder from "../reminder/Reminders";
 import WeatherEngine from "../WeatherCard/WeatherEngine";
+import ComponentSelect from '../Navbars/ComponentSelect';
 //import Stock from "../stock/stock";
 //import Plot from "react-plotly.js";
 import "./dash.css";
@@ -29,6 +30,15 @@ export default class dashboard extends Component {
             <Row>
               <Col lg="5" style={{ height: "500px" }}>
                 <News />
+                <br />
+                <ComponentSelect
+                  Render={({ on, toggle }) => (
+                    <div>
+                      {on && <h1>{News}</h1>}
+                      <button onClick={toggle}>Show / Hide</button>
+                    </div>
+                  )}
+                />
               </Col>
               <Col lg="" style={{ height: "100px" }}>
                 {/* <Stock /> */}
