@@ -38,7 +38,7 @@ class Stockapi extends Component {
     fetchStock() {
         const pointerToThis = this;
         const API_KEY = 'Place API_Key here';
-        let StockSymbol = 'AMZN'
+        // let StockSymbol = 'AMZN'
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${this.state.stockChartZValues}&outputsize=compact&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];

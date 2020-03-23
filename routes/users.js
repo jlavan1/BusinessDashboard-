@@ -68,26 +68,25 @@ users.post('/signin', (req, res) => {
     })
 })
 
-// function verifyToken(req, res, next) {
-//     // Get auth header value
-//     const bearerHeader = req.headers['authorization'];
-//     // Check if bearer is undefined
-//     if(typeof bearerHeader !== 'undefined') {
-//       // Split at the space
-//       const bearer = bearerHeader.split(' ');
-//       // Get token from array
-//       const bearerToken = bearer[1];
-//       // Set the token
-//       req.token = bearerToken;
-//       // Next middleware
-//       next();
-//     } else {
-//       // Forbidden
-//       res.sendStatus(403);
-//     }
+// users.get('/profile', (req, res) => {
+//     var decoded = jwt.verify(req.headers['authorization'], secret)
   
-//   }
-//
+//     models.user_accounts.findOne({
+//       where: {
+//         id: decoded.id
+//       }
+//     })
+//       .then(user => {
+//         if (user) {
+//           res.json(user)
+//         } else {
+//           res.send('User does not exist')
+//         }
+//       })
+//       .catch(err => {
+//         res.send('error: ' + err)
+//       })
+//   })
   users.get('/user', auth, async (req, res) => {
     try {
       const user = await models.user_accounts.findById(req.user.id).select('password');

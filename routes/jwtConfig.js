@@ -6,7 +6,7 @@ const secret = 'mysecretsshhh';
 // const { JWT_SECRET } = config;
 
 export default (req, res, next) => {
-    const token = req.header('x-auth-token');
+    const token = req.header('token');
   
     // Check for token
     if (!token)

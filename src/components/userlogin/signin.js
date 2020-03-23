@@ -5,14 +5,17 @@ import './index.css';
 import axios from 'axios'
 
 class ModalPage extends Component {
-  state = {
+  constructor(props) {
+    super(props);
+    this.state = {
     modal2: false,
     email: '',
     password: '',
     error: true
 
 }
-
+this.history = props.history;
+  }
 toggle = nr => () => {
   let modalNumber = 'modal' + nr
   this.setState({
@@ -32,9 +35,9 @@ handleClick(event) {
   })
       .then(response => {
         console.log(response)
-        localStorage.setItem('x-auth-token', response.data)
-        
-        return response.data
+        localStorage.setItem('usertoken', response.data)
+        console.log(localStorage.usertoken)
+        this.history.push('/')
 
       }).catch(error=>{
           console.log('error')

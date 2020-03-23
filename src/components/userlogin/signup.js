@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBInput, MDBModalFooter } from 'mdbreact';
+import { register } from './axios'
 import axios from 'axios'
 class ModalPage extends Component {
     state = {

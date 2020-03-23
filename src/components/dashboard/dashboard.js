@@ -3,7 +3,6 @@ import News from '../news/newsApi'
 import Reminder from '../reminder/Reminders'
 import WeatherEngine from '../weather/weatherEngine'
 import Stock from '../stock/stock'
-import Plot from 'react-plotly.js';
 import './dash.css'
 import {Container,Row,Col,Jumbotron} from 'react-bootstrap'
 export default class dashboard extends Component {
@@ -40,7 +39,7 @@ export default class dashboard extends Component {
  <Reminder/>
       </Col>
       <Col  lg="3" style={{ height: '500px' }} >
-      <WeatherEngine/>
+      <WeatherEngine location="Houston, USA"/>
       </Col>
     
       </Row>
