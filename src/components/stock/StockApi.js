@@ -82,18 +82,9 @@ class Stockapi extends Component {
         //console.log(stockChartZValues)
         return (
             <div>
-                
-                <p>Stock is: {stock} </p>
+        
 
-                <form onSubmit={this.handleSubmit}>
-                <p><input
-                    id='id'
-                    type='text'
-                    placeholder= 'Enter Stock Ticker'
-                    value= {this.state.stockChartZValues}
-                    onChange={this.handleChange.bind(this)}
-                /> </p>
-                <p><button>Submit</button></p>
+                
                 
 
                 <Plot
@@ -118,6 +109,14 @@ class Stockapi extends Component {
                         }
                     }}
                 />
+                <form onSubmit={this.handleSubmit}>
+                <p><input
+                    id='id'
+                    type='text'
+                    placeholder= 'Enter Stock Ticker'
+                    value= {this.state.stockChartZValues}
+                    onChange={this.handleChange.bind(this)}
+                /> <button>Submit</button></p>
 
 </form>
             </div>
