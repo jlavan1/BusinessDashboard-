@@ -15,11 +15,11 @@ const db = (props) => {
     }, []);
 
     if (transformedComponents.length === 0 ){
-        transformedComponents = <p> Please Add Your Custom Business Components </p>
+        transformedComponents = <p class="center"> Please Add Your Custom Business Components </p>
     }
 
     return(
-        <div className='DB'>
+        <div className='DB' class="componentSizing">
             {transformedComponents}
             {/* <DBComponents type="stock"/>
             <DBComponents type="news"/>

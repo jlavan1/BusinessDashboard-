@@ -11,7 +11,7 @@ const compControls =[
 ];
 
 const DashBoardControl = (props) => (
-    <div className='DashBoardControl'>
+    <div className='DashboardControl'>
         {compControls.map(ctrl => (
             <Controls 
             key={ctrl.label} 
