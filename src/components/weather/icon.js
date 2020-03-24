@@ -6,8 +6,8 @@ const Icon = props => {
     width: 40%;
   `;
 
-  var icon = "";
-  switch (props.condition) {
+    var icon = ''
+    switch (props.condition) {
     case "Clouds":
       icon = `./img/Mostly Cloudy-2x.png`;
       break;
@@ -36,7 +36,7 @@ const Icon = props => {
       icon = `./img/Snow-2x.png`;
       break;
     case "Rain":
-      icon = `./img/Rain-2x.png`;
+      icon = `./img/Rain-2x.png` ;
       break;
     case "Drizzle":
       icon = `./img/Drizzle-2x.png`;
@@ -47,8 +47,13 @@ const Icon = props => {
     default:
       icon = `./img/Fog-2x.png`;
       break;
-  }
-  return <Icon src={require("../img/Rain-2x.png")} alt="Weather Icon"></Icon>;
+  }    
+  return (
+    <Icon
+      src={require("../img/Rain-2x.png")}
+      alt="Weather Icon"
+    ></Icon>
+  );
 };
 
 export default Icon;

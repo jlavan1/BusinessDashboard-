@@ -40,6 +40,7 @@
     "react-dazzle": "^1.4.0",
     "react-dom": "^16.13.0",
     "react-plotly": "^1.0.0",
+    "react-plotly.js": "^2.4.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",

@@ -1,0 +1,30 @@
+.DB{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* @media (min-width: 500px) and (min-height:400px){
+    .DB {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 500px) and (min-height:401px){
+    .DB {
+        width: 450px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height:700px){
+    .DB {
+        width: 700px;
+        height: 600px;
+    }
+} */

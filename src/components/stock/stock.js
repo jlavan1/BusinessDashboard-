@@ -1,10 +1,13 @@
-import React from "react";
-import Stockapi from "./StockApi";
+import React from 'react';
+import Stockapi from './StockApi';
 
 const stock = () => (
-  <div>
-    <Stockapi />
-  </div>
-);
+    <div>
+        
+        <Stockapi />
+        
+    </div>
+
+)
 
 export default stock;

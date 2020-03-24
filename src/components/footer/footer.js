@@ -1,9 +1,9 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import {  MDBContainer, MDBFooter } from "mdbreact";
 
 const FooterPagePro = () => {
   return (
-    <MDBFooter color="indigo" className="font-small darken-3 pt-0 fixed-bottom">
+    <MDBFooter color="indigo" className="font-small darken-3 pt-0 fixed-bottom" > 
       {/* <MDBContainer>
         <MDBRow>
           <MDBCol md="12" className="py-5">
@@ -43,6 +43,6 @@ const FooterPagePro = () => {
       </div>
     </MDBFooter>
   );
-};
+}
 
 export default FooterPagePro;

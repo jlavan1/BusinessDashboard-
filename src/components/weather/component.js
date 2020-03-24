@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import Location from "./Location";
-import Icon from "./Icon";
+import Icon from "./icon";
 import Condition from "./Condition";
 
 const WeatherCard = ({ temp, condition, city, country }) => {

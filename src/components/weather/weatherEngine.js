@@ -47,7 +47,7 @@ const WeatherEngine = ({ location }) => {
     <div>
       {!loading && !error ? (
         <div>
-          <MDBCol md="12">
+        <MDBCol md="12">
             <MDBFormInline className="md-form mr-auto">
               <input
                 className="form-control mr-sm-2 white-text"
@@ -76,6 +76,7 @@ const WeatherEngine = ({ location }) => {
             country={weather.country}
           />
           <br />
+          
         </div>
       ) : loading ? (
         <div style={{ color: "black" }}>Loading</div>
