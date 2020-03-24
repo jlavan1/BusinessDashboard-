@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 5px 5px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .Controls button{
@@ -15,6 +17,7 @@
     border: 1px solid black;
     cursor: pointer;
     outline: none;
+    
 
 }
 
@@ -45,11 +48,13 @@
 .Controls .Add {
     background-color: #8F5E1E;
     color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .Controls .Remove:hover, .Controls .Remove:active {  
     background-color: #DAA972;
     color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .Controls .Add:hover,.Controls .Add:active {
